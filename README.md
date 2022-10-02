@@ -160,3 +160,25 @@ export const typeORMConfig: TypeOrmModuleOptions = {
 
 ```
 
+이렇게 하고, root module에서 import 해준다.
+
+## Entity 생성하기
+
+### Why Entity??
+
+ORM 없이 데이터 베이스를 생성할 때는 `Create Table ~~ `와 같이 이용하여 생성하였다. 하지만 ORM을 이용하면 entity class를 만들어서 테이블에 연결되는 클래스를 정의할 수 있다. @Entity() 데코레이터와 @Column() 등의 데코레이터를 사용한다.
+
+## Repository 생성하기
+
+### What is Repository?
+
+entity 객체와 함께 작동하며, entity CRUD를 처리한다. 
+
+DB와 관련된 일들은 Service에서 하는 것이 아니라 Repository에서 수행하며, 이를 `Repository Pattern`이라고도 부른다.
+
+- board.repository.ts를 생성
+
+model과 entity의 차이는 ?? 이를 구별하기.! entity는 DB와 1:1매칭이 되는 Class! 따라서 entity에는 어떤 것이 column이고, pk이고 등의 정보가 들어가게 될 것이고, model은 데이터베이스를 사용한다면 굳이 필요가 없어질 것이다.! 
+
+파일 정리를 한번 싹 해주자~
+
